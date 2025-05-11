@@ -67,7 +67,7 @@
         }
         .message-box {
             position: fixed;
-            top: 40px; /* Move closer to the top */
+            bottom: -150px; /* Start off-screen at the bottom */
             left: 50%;
             transform: translateX(-50%);
             background-color: #fef2f2;
@@ -79,7 +79,7 @@
             z-index: 2000;
             font-size: 16px; /* Increase font size */
             text-align: center;
-            transition: top 0.5s ease-in-out;
+            transition: bottom 0.5s ease-in-out; /* Changed transition property */
             min-width: 80%; /* Take up more width on mobile */
             max-width: 95%;
             box-sizing: border-box; /* Include padding and border in width */
@@ -90,7 +90,7 @@
             border-color: #bbf7d0;
         }
         .message-box.show {
-            top: 60px; /* Adjust slide-in position */
+            bottom: 80px; /* Slide in from the bottom */
         }
 
         /* Media query for smaller screens (e.g., phones) */
@@ -109,12 +109,12 @@
                 font-size: 14px;
             }
             .message-box {
-                top: 5px;
                 padding: 12px 15px;
                 font-size: 14px;
+                bottom: -120px; /* Adjust off-screen position for smaller height */
             }
             .message-box.show {
-                top: 50px;
+                bottom: 60px; /* Adjust slide-in position for smaller height */
             }
         }
     </style>
